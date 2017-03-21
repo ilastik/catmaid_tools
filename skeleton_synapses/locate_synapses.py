@@ -266,6 +266,7 @@ def open_project( project_path, init_logging=True ):
     parsed_args = ilastik_main.parser.parse_args([])
     parsed_args.headless = True
     parsed_args.project = project_path
+    parsed_args.readonly = True
 
     shell = ilastik_main.main( parsed_args, init_logging=init_logging )
     return shell
